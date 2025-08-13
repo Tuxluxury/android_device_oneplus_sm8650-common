@@ -136,7 +136,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
 
 # Dolby
-#$(call inherit-product, hardware/dolby/dolby.mk)
+$(call inherit-product, hardware/dolby/dolby.mk)
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -475,9 +475,6 @@ PRODUCT_PACKAGES += \
     firmware_wlanmdsp.otaupdate_symlink \
     firmware_wlan_mac.bin_symlink \
     firmware_WCNSS_qcom_cfg.ini_symlink
-
-# V4A
-$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
 
 # Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/oneplus/sm8650-common/sm8650-common-vendor.mk)
